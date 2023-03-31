@@ -1,0 +1,195 @@
+*CABEÇALHO*/
+
+* {
+    box-sizing: border-box;
+}
+
+header .container { /*configuração dos itens do cabeçalho*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    header li a {
+        /*para ajustar os links do cabeçalho*/
+        color: rgb(0, 0, 0); /*cor do título dos links*/
+        text-decoration: none; /*sem o sublinhado */
+    }
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    }
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 30px;
+    }
+
+header nav p {
+    font-weight: bold;
+}
+
+header {
+    height: 100vh;
+    /*background: no-repeat center/cover url(../imagens/A1.jpg)*/
+}
+
+.header-content {
+    max-width: 400px;
+    margin: 150px auto;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 4rem;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    }
+
+header nav ul li {
+    margin: 0 15px;
+    }
+
+/*RESPONSIVIDADE*/
+
+/* Landscape phone to portrair tablet */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    body {
+        margin-bottom: 55px;
+    }
+    
+    header nav ul {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        z-index: 99;
+
+        background: rgb(228, 228, 228);
+        color: white;
+        font-weight: bold;
+        height: 55px;
+
+        display: flex;
+        justify-content: space-between; /* justificar horizontal e dividir o espaço entre os itens do menu */
+        align-items: center; /* justificar vertical/no meio da caixa */
+    }
+
+    header nav p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {}
+
+/* Large desktop */
+@media (min-width: 1200px) {}
+
+/*SEÇÃO IMAGENS*/
+
+.container img {
+    max-height: 400px;
+    max-width: 600px;
+    margin: 40px 40px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*SEÇÃO CONTATO*/
+
+.contact .container { /*colocar toda a seção dos contatos com aparencia de colunas lado a lado*/
+    display: block;
+}
+
+.contact-methods { /*espaçamento da caixa do entre em contato*/
+    display: flex;
+    justify-content: flex-start; /*aplicando espaçamento entre as subseções*/
+    margin-left: 16px;
+}
+
+form input, /*ajuste das caixinhas de texto*/
+form textarea,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    padding: 8px; /*espaçamento interno*/
+}
+
+form textarea {
+    resize: none; /*desabilitando a função de aumentar a caixinha do text area*/
+    height: 180px; /*tamanho da caixa de msg*/
+}
+
+section h3 {
+    margin-bottom: 16px; /*colocando espaçamento entre o título h3 e as seções*/
+    margin-left: 16px;
+}
+
+.container .title-contact {
+    margin: 16px;
+    padding: 0 16px;
+}
+
+/*customizando formulário (cores, cor do botão)*/
+form button {
+    background-color: rgb(54, 54, 54);
+    color: rgb(236, 240, 241);
+    border: none;
+    cursor: pointer; /*fica a mãozinha quando passa o mouse por cima do botão*/
+}
+
+form button:hover { /*quando aperta enviar, o botão fica de outra cor*/
+    background-color: rgb(91, 104, 139);
+}
+
+input:focus, textarea:focus { /*ajuste da borda das caixinhas do formulário, quando se aperta/escreve*/
+    outline-color:rgb(49, 49, 49);
+}
+
+.social-links img { /*ajuste de icones de social midia no tamanho menor, colocando o class no html*/
+    height: 30px;
+    margin: 0;
+}
+
+.social-links li { /*colocando as imgs dos links lado a lado*/
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a { /*tirando a bolinha de lista dos elementos da tag a href de links*/
+    text-decoration: none;
+} 
+
+
+/*RODAPÉ*/
+
+footer { /*estilizando o rodapé*/
+    background-color: rgb(0, 0, 0);
+    color: rgb(236, 240, 241);
+    padding: 5px 0;
+}
